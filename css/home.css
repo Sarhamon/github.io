@@ -38,7 +38,7 @@ body {
   }
   
   .side-menu li {
-    text-align: right;
+    text-align: left;
     margin: 20px auto;
     color: white;
     font-size: 1rem;
