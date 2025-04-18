@@ -57,6 +57,10 @@ body {
   }
   
   .content-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* main-box 내부에서 전체 높이 확보 */
     flex-grow: 1;
     padding: 2rem;
     color: white;
@@ -76,6 +80,7 @@ body {
   .footer {
     text-align: right;
     font-size: 0.9em;
-    margin: 8px 12px;
-    color: rgba(255, 255, 255, 0.4); /* 흐릿한 흰색 */
+    margin-top: 10px;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.5);
   }
