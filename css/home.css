@@ -62,3 +62,20 @@ body {
     color: white;
   }
   
+  .section p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: white;
+  }
+  
+  /* 문단의 첫 글자만 키우기 */
+  .section p::first-letter {
+    font-size: 1.3em;
+  }
+
+  .footer {
+    text-align: right;
+    font-size: 0.9em;
+    margin: 8px 12px;
+    color: rgba(255, 255, 255, 0.4); /* 흐릿한 흰색 */
+  }
