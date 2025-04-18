@@ -20,10 +20,11 @@ body {
   }
   
   .side-menu {
-    width: 120px;
+    width: 20%;
     background: transparent;
-    border-right: 4px solid rgba(255, 255, 255, 0.3);
-    padding: 2rem 0;
+    border-right: 4px dotted rgba(255, 255, 255, 0.3);
+    padding: 2rem 1rem;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
