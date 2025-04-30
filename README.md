@@ -4,8 +4,7 @@
 기술 스택, 프로젝트, 연락처 등 개인 정보를 보기 좋게 정리하여 소개합니다.
 
 ![status](https://img.shields.io/badge/status-in%20progress-yellow)
-![license](https://img.shields.io/badge/license-MIT-green)
-![tech](https://img.shields.io/badge/stack-HTML%2FCSS%2FJS%2FTS-blue)
+![tech](https://img.shields.io/badge/stack-HTML%2FCSS%2FJS-blue)
 
 ---
 
