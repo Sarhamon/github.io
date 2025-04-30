@@ -1,11 +1,7 @@
-// intro.js
-
-// 1. 인트로 페이드아웃 후 body.html 불러오기
 setTimeout(() => {
     const intro = document.getElementById('intro');
     intro.classList.add('fade-out');
   
-    // 2. fade-out 끝난 후 본문 로딩
     setTimeout(() => {
       fetch('view/body.html')
         .then(res => res.text())
@@ -13,7 +9,15 @@ setTimeout(() => {
           const app = document.getElementById('app');
           app.innerHTML = html;
           app.classList.remove('hidden');
+  
+          // 카드처럼 나타나도록 opacity 적용
+          setTimeout(() => {
+            app.classList.add('visible');
+          }, 50);
+  
+          // 인트로를 완전히 숨김 처리
+          intro.style.display = "none";
         });
-    }, 1500); // fadeOut 애니메이션 길이와 맞춤
-  }, 2500); // 텍스트 보여주는 시간
-  console.log('body.html loaded');
+    }, 1500);
+  }, 2500);
+  
