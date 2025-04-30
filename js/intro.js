@@ -16,4 +16,4 @@ setTimeout(() => {
         });
     }, 1500); // fadeOut 애니메이션 길이와 맞춤
   }, 2500); // 텍스트 보여주는 시간
-  
+  console.log('body.html loaded');
