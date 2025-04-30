@@ -1,18 +1,19 @@
 // intro.js
 
-// 텍스트 fade-in 후 → fade-out
+// 1. 인트로 페이드아웃 후 body.html 불러오기
 setTimeout(() => {
-  const intro = document.getElementById('intro');
-  intro.classList.add('fade-out');
-
-  // intro 사라지고 나서 info.html을 초기 카드로 로딩
-  setTimeout(() => {
-    fetch('views/info.html') // ✅ info만 먼저 불러오기
-      .then(res => res.text())
-      .then(html => {
-        const slideContent = document.getElementById('slide-content'); // id 변경!
-        slideContent.innerHTML = html;
-        slideContent.classList.add('fade-in');
-      });
-  }, 1500);
-}, 2500);
+    const intro = document.getElementById('intro');
+    intro.classList.add('fade-out');
+  
+    // 2. fade-out 끝난 후 본문 로딩
+    setTimeout(() => {
+      fetch('view/body.html')
+        .then(res => res.text())
+        .then(html => {
+          const app = document.getElementById('app');
+          app.innerHTML = html;
+          app.classList.remove('hidden');
+        });
+    }, 1500); // fadeOut 애니메이션 길이와 맞춤
+  }, 2500); // 텍스트 보여주는 시간
+  

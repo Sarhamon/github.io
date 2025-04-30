@@ -1,22 +1,42 @@
-#intro {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100vh;
+/* 1. 기본 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    background-color: #121212;
+    color: white;
+    font-family: 'Segoe UI', 'Pretendard', sans-serif;
+  }
+  
+  /* 2. 인트로 영역 */
+  #intro {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    height: 100vh;
+    background-color: #121212;
     color: white;
+    font-size: 2rem;
+    letter-spacing: 2px;
     opacity: 0;
     animation: fadeIn 2s forwards;
-    z-index: 10;
   }
   
+  /* 페이드아웃용 클래스 (JS에서 추가) */
   #intro.fade-out {
     animation: fadeOut 1.5s forwards;
   }
   
+  /* 3. 메인 콘텐츠 영역 (초기 숨김) */
+  #app.hidden {
+    display: none;
+  }
+  
+  /* 4. 애니메이션 */
   @keyframes fadeIn {
     to {
       opacity: 1;
@@ -27,19 +47,5 @@
     to {
       opacity: 0;
     }
-  }
-  
-  #home {
-    opacity: 0;
-    transition: opacity 1.5s;
-    padding: 2rem;
-  }
-  
-  #home.visible {
-    opacity: 1;
-  }
-  
-  .hidden {
-    display: none;
   }
   
