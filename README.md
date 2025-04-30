@@ -24,10 +24,3 @@
 - 📞 **연락처 섹션**: GitHub, 이메일 등 링크 제공
 
 ---
-
-## 🚀 실행 방법
-
-```bash
-git clone https://github.com/your-id/Portfolio.git
-cd Portfolio
-# 정적 사이트이므로 브라우저에서 index.html을 열면 됩니다.
