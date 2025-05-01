@@ -10,16 +10,16 @@ setTimeout(() => {
         app.innerHTML = html;
         app.classList.remove('hidden');
 
-        // 부드럽게 표시
-        setTimeout(() => {
-          app.classList.add('visible');
-        }, 50);
-
-        // 배경 이미지 + 오버레이 적용
-        document.body.classList.add('image-bg');
-
         // 인트로 제거
         intro.style.display = "none";
+
+        // 부드럽게 표시 + 배경은 약간 늦게 적용
+        setTimeout(() => {
+          app.classList.add('visible');
+          
+          // 이 타이밍에 배경 이미지 적용
+          document.body.classList.add('image-bg');
+        }, 100); // visible 클래스 부여 직후 적용
       });
   }, 1500);
 }, 2500);
