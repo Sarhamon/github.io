@@ -5,8 +5,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #2a2a2a;
-  border-radius: 5%;
+  background-color: #80808080;
+  border-radius: 15%;
   display: flex;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
