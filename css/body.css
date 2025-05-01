@@ -5,8 +5,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #80808080;
-  border-radius: 20px;
+  background-color: rgba(42, 42, 42, 0.4);
+  border-radius: 30px;
   backdrop-filter: blur(10px);
   display: flex;
   overflow: hidden;

@@ -11,7 +11,7 @@ setTimeout(() => {
         const app = document.getElementById('app');
         app.innerHTML = html;
         app.classList.remove('hidden');
-
+        
         // 카드처럼 자연스럽게 나타나기
         setTimeout(() => {
           app.classList.add('visible');
