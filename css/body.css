@@ -6,21 +6,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(42, 42, 42, 0.4);
-  border-radius: 30px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 40px;
   display: flex;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* 사이드 메뉴 영역 */
 .side-menu {
   width: 200px;
   border-right: 2px dashed rgba(255, 255, 255, 0.2);
   padding: 2rem 1rem;
 }
 
-/* 콘텐츠 영역 */
 .content-area {
   flex: 1;
   position: relative;
@@ -31,7 +30,6 @@
   overflow-y: auto;
 }
 
-/* 하단 Contact */
 .footer {
   position: absolute;
   bottom: 20px;

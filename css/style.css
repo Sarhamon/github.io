@@ -1,67 +1,60 @@
-/* 1. 기본 초기화 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* 기본 초기화 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body, html {
   height: 100%;
-  background-color: #000;
   color: white;
   font-family: 'Segoe UI', 'Pretendard', sans-serif;
   overflow: hidden;
+  background-color: #000;
 }
 
-/* 2. 인트로 텍스트 */
+/* 인트로 */
 #intro {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2.5rem;
-  letter-spacing: 2px;
   background-color: #000;
   opacity: 0;
   animation: fadeIn 2s forwards;
   z-index: 5;
 }
-
-/* 3. 인트로 페이드아웃 */
 #intro.fade-out {
   animation: fadeOut 1.5s forwards;
 }
 
-/* 4. 앱 콘텐츠 영역 (처음엔 숨김) */
+/* 본문 영역 */
 #app {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: transparent;
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 10;
 }
+#app.visible { opacity: 1; }
+.hidden { display: none; }
 
-#app.visible {
-  opacity: 1;
+/* 배경 이미지 + 오버레이 */
+body.image-bg {
+  background: url('../assets/background.png') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+body.image-bg::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  pointer-events: none;
 }
 
-.hidden {
-  display: none;
-}
-
-/* 5. 애니메이션 정의 */
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-
-@keyframes fadeOut {
-  to { opacity: 0; }
-}
+/* 페이드 애니메이션 */
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes fadeOut { to { opacity: 0; } }

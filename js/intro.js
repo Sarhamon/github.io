@@ -1,5 +1,3 @@
-// intro.js
-
 setTimeout(() => {
   const intro = document.getElementById('intro');
   intro.classList.add('fade-out');
@@ -11,14 +9,17 @@ setTimeout(() => {
         const app = document.getElementById('app');
         app.innerHTML = html;
         app.classList.remove('hidden');
-        
-        // 카드처럼 자연스럽게 나타나기
+
+        // 부드럽게 표시
         setTimeout(() => {
           app.classList.add('visible');
         }, 50);
 
-        // 인트로 완전히 제거
+        // 배경 이미지 + 오버레이 적용
+        document.body.classList.add('image-bg');
+
+        // 인트로 제거
         intro.style.display = "none";
       });
-  }, 1500); // fadeOut 애니메이션 시간
-}, 2500); // intro 표시 시간
+  }, 1500);
+}, 2500);
