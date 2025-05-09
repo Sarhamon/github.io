@@ -50,21 +50,21 @@
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
+  margin-left: 0.5rem; /* 점선에 더 가까이 붙임 */
 }
 
 .menu button {
   background: none;
   color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
+  border: none;
+  padding: 0;
+  font-size: 1.1rem; /* 폰트 키움 */
   cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  font-size: 1rem;
+  text-align: left;
+  transition: color 0.2s;
 }
 
 .menu button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(3px);
+  color: #bbb;
 }
