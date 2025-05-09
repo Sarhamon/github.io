@@ -15,7 +15,7 @@
 }
 
 .side-menu {
-  width: 200px;
+  width: 15%;
   border-right: 2px dashed rgba(255, 255, 255, 0.2);
   padding: 2rem 1rem;
 }
@@ -50,8 +50,11 @@
 .menu {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 1.2rem;
-  margin-left: 0.5rem; /* 점선에 더 가까이 붙임 */
+  margin-right: 0.1rem;
+  height: 100%;
+  justify-self: center;
 }
 
 .menu button {
